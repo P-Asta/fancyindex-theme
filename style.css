@@ -1,0 +1,120 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    --bg: #090C2A;
+    --blue: #6457FE;
+    --light-blue:#a198ff;
+    --overlay1: #221f4a81;
+    --overlay2: #1C1A3F;
+}
+
+* {
+    font-size: 16px;
+    min-width: 0 !important;
+    border: 0 !important;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    color: var(--light-blue);
+    font-family: "pretendard";
+}
+
+html {
+    background: var(--bg);
+     -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+     -ms-text-size-adjust: none; 
+     -o-text-size-adjust: none; 
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw !important;
+    height: fit-content;
+    margin-bottom: 40px;
+}
+table {
+    display: table;
+    flex-grow: 1;
+    max-width: 80%;
+    
+}
+
+
+tr:nth-child(even) {
+    background: var(--overlay2);
+}
+
+a {
+    align-items: center;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+p {
+    background: var(--blue);
+}
+
+table, thead {
+    width: 100%;
+}
+
+td, tr {
+    padding: 8px;
+    
+    > a:hover {
+        /*text-decoration: underline;*/
+    }
+}
+tbody > tr:hover {
+    background: var(--overlay1);
+}
+
+th:first-child, td:first-child {
+    padding-left: 8px;
+    border-radius: 4px 0 0 4px;
+}
+
+th:last-child, td:last-child {
+    padding-right: 8px;
+    border-radius: 0 4px 4px 0;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    padding: 8px;
+    overflow: hidden;
+    background: var(--blue);
+}
+th > a {
+    color: #fff
+}
+
+svg {
+    height: 12px;
+}
+
+svg > path {
+    fill: var(--blue)
+}
+
+.link > a {
+    display: inline-flex;
+    gap: 8px;
+    align-content: center;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+@media (width < 650px) {
+    th, td {
+        border-radius: 4px !important;
+    }
+}
